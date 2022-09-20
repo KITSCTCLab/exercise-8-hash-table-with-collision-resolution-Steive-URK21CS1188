@@ -4,19 +4,18 @@ def display_hash(hashtable) -> None:
 	# Write your code here
 	for i in range(len(hashtable)):
 		print(i,end="")
-		print("-->",end="")
 		for j in hashtable[i]:
+			print("-->",end="")
 			print(j,end="")
-			if (i+1!=len(hashtable)):
-				print("-->",end="")
-				
+		print("\n")
+		
 def Hashing(keyvalue) -> int:
 	return keyvalue % len(HashTable)
 
 def insert(Hashtable, keyvalue, value) -> None:
 	# Write your code here
 	x=Hashing(keyvalue)
-    	Hashtable[x].append(value)
+	Hashtable[x].append(value)
 		
 # Do not edit the following code
 hash_table_size = int(input())
